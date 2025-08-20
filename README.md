@@ -1,6 +1,5 @@
 # 一个有趣的个人网页
-
-## An-interesting-personal-web-page
+An-interesting-personal-web-page
 
 这个项目实在AI的帮助下完成的。
 
