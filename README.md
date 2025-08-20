@@ -1,7 +1,7 @@
-# 一个有趣的个人网页
+## 一个有趣的个人网页
 An-interesting-personal-web-page
 
-这个项目实在AI的帮助下完成的。
+这个项目是在AI的帮助下完成的。
 
 This project was completed with the help of AI.
 
