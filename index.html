@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenSonet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;">
+    <img class="background" src="background.jpg" alt="背景图" draggable="false">
+
+    <div class="card-container" id="card-container">
+        <div class="card" id="card">
+            <div class="card-content">
+                <img class="avatar" src="icon/densonet.jpg" alt="头像" draggable="false">
+                <div class="name-container">
+                    <span class="name-text"></span>
+                </div>
+                <p class="introduction">"海内存知己，天涯若比邻。"</p>
+                <div class="link">
+                    <a href="https://qm.qq.com/q/9ZT99ugN4A" target="_blank" draggable="false">
+                        <img src="icon/tencent-qq.svg" alt="QQ" draggable="false">
+                    </a>
+                    <a href="https://discordapp.com/users/1235023292272869437" target="_blank" draggable="false">
+                        <img src="icon/discord.svg" alt="Discord" draggable="false">
+                    </a>
+                    <a href="https://open.spotify.com/user/31tjxaexb4i6ng3r6w2z77w7xrni" target="_blank"
+                        draggable="false">
+                        <img src="icon/spotify.svg" alt="Spotify" draggable="false">
+                    </a>
+                    <a href="https://github.com/DenSonet" target="_blank" draggable="false">
+                        <img src="icon/github.svg" alt="GitHub" draggable="false">
+                    </a>
+                    <a href="https://steamcommunity.com/profiles/76561199623171948" target="_blank" draggable="false">
+                        <img src="icon/steam.svg" alt="Steam" draggable="false">
+                    </a>
+                    <a href="https://www.roblox.com/users/5059795424" target="_blank" draggable="false">
+                        <img src="icon/SimpleIconsRoblox.svg" alt="Roblox" draggable="false">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="music-player" id="musicToggle" draggable="false">
+        <div class="music-icon">♪</div>
+    </div>
+    <audio id="bgMusic" loop autoplay muted>
+        <source src="musics/我落淚情緒零碎.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+
+</html>

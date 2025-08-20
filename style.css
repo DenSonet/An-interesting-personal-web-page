@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'N4';
+    src: url('fonts/N4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'N4', sans-serif; 
+    perspective: 1000px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    background: #000;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px) brightness(0.7);
+    opacity: 0;
+    animation: backgroundFadeIn 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes backgroundFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.card-container {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 100px);
+    max-width: 600px;
+    height: auto;
+    z-index: 10;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.card-container:hover .card {
+    transform: scale(1.02);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: flipIn 1s ease-out forwards;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(30px);
+}
+
+@keyframes flipIn {
+    from {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(30px);
+}
+
+.name-container {
+    margin: 15px 0 0 0;
+    min-height: 40px;
+    position: relative;
+    display: inline-block;
+    pointer-events: none;
+    z-index: 2;
+    transform: translateZ(30px);
+}
+
+.name-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 4px;
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    margin-right: 2.5px;
+}
+
+.cursor {
+    position: absolute;
+    width: 2px;
+    height: 28px;
+    background: white;
+    animation: blink 0.75s step-end infinite;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.introduction {
+    margin: 6px 0 0 0;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(30px);
+}
+
+.link {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(30px);
+}
+
+.link img {
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.link img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.music-player:hover {
+    transform: scale(1.1);
+}
+
+.music-icon {
+    color: white;
+    font-size: 20px;
+    pointer-events: none;
+}
